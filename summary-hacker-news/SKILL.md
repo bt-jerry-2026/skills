@@ -10,7 +10,7 @@ description: 抓取 Hacker News 热门内容并生成深度分析报告，输出
 ## Phase 1 — 抓取数据
 
 ```bash
-node ~/.claude/skills/hacker-news/scripts/fetch_hn.js
+node ~/.openclaw/workspace/skills/summary-hacker-news/scripts/fetch_hn.js
 ```
 
 脚本输出数据源文件的绝对路径到 stdout，记录为 `source_path`。
