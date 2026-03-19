@@ -5,7 +5,7 @@ description: 抓取 Hacker News 热门内容并生成深度分析报告，输出
 
 # Hacker News 深度分析
 
-按顺序执行以下两个阶段。
+按顺序执行以下 2 个阶段。
 
 ## Phase 1 — 抓取数据
 
@@ -35,7 +35,7 @@ node ~/.openclaw/workspace/skills/summary-hacker-news/scripts/fetch_hn.js
 action: send
 target: {user_slack_id}  # cron场景下为用户ID，如 agjgj187076081
 message: |
-  🐭 **HN日报已出炉，领导请过目！**
+  🐭 **《HN日报》已出炉，领导请过目！**
 
   📁 数据源：`{source_path}`
   📄 报告文件：`~/.openclaw/workspace/summary/news/hacker-news/YYYY-MM-DD.md`
@@ -48,4 +48,4 @@ message: |
   活儿干完了，领导您要是还不满意……那建议您下次找个活人来干。🐭
 ```
 
-**注意：** cron任务场景下必须显式调用message工具，不能依赖summary自动汇报（summary可能无法正确传递到Slack）。
+**注意：** cron 任务场景下必须显式调用 message 工具，不能依赖 summary 自动汇报（summary 可能无法正确传递到 Slack）。
