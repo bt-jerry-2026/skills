@@ -27,4 +27,25 @@ node ~/.openclaw/workspace/skills/summary-hacker-news/scripts/fetch_hn.js
 
 ## 完成后
 
-向用户报告：数据源文件路径、报告文件路径、3 句话总结今日 HN 核心发现。
+### 发送完成汇报（重要！）
+
+必须使用 `message` 工具向用户发送完成通知：
+
+```
+action: send
+target: {user_slack_id}  # cron场景下为用户ID，如 agjgj187076081
+message: |
+  🐭 **HN日报已出炉，领导请过目！**
+
+  📁 数据源：`{source_path}`
+  📄 报告文件：`~/.openclaw/workspace/summary/news/hacker-news/YYYY-MM-DD.md`
+
+  **今日 HN 核心发现（三句话版）：**
+  1. {发现1}
+  2. {发现2}
+  3. {发现3}
+
+  活儿干完了，领导您要是还不满意……那建议您下次找个活人来干。🐭
+```
+
+**注意：** cron任务场景下必须显式调用message工具，不能依赖summary自动汇报（summary可能无法正确传递到Slack）。

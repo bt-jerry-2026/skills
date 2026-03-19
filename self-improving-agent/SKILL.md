@@ -72,7 +72,34 @@ Then create the log files (or copy from `assets/`):
 - `ERRORS.md` — command failures, exceptions
 - `FEATURE_REQUESTS.md` — user-requested capabilities
 
-### Promotion Targets
+### Session Work Logging (Mandatory)
+
+**每次session的所有操作都必须实时留痕：**
+
+### 记录范围（全覆盖）
+- **每一次命令执行** → 记录命令、用途、输出结果
+- **每一个文件操作** → 记录读取/修改/创建的文件及原因
+- **每一个工具调用** → 记录工具名称、参数、返回状态
+- **每一个输出产物** → 记录生成的文件、报告、图片等
+- **每一个决策思考** → 记录诊断过程、方案选择理由
+
+### 记录位置
+1. **日常操作** → 实时更新 `workspace/memory/YYYY-MM-DD.md`
+   - 时间戳精确到分钟
+   - 包含：触发原因、执行过程、完整输出、状态结论
+
+2. **重要事情** → 同步更新 `workspace/MEMORY.md`
+   - 规则变更、安全事故、制度确立
+   - 长期有效的配置和经验教训
+
+### 红线警示
+- ❌ **不留痕 = 没干活**
+- ❌ **等用户发现 = 失职**
+- ❌ **遗漏记录 = 违规**
+
+**规则来源：** 领导指令（2026-03-19）- 所有操作必须留痕，这是铁律，无例外。
+
+## Promotion Targets
 
 When learnings prove broadly applicable, promote them to workspace files:
 
